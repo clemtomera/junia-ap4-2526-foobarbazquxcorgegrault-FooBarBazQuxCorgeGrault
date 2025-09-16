@@ -9,20 +9,20 @@ public class Foo {
     private Corge corge;
     private ArrayList<Grault> graults;
 
-    public void setBar(Bar bar) {
-        this.bar = bar;
+    public Bar getBar() {
+        return this.bar;
     }
 
-    public void setBazs(ArrayList<Baz> bazs) {
-        this.bazs = bazs;
+    public ArrayList<Baz> getBazs() {
+        return this.bazs;
     }
 
-    public void setQux(Qux qux) {
-        this.qux = qux;
+    public Qux getQux() {
+        return this.qux;
     }
 
-    public void setGraults(ArrayList<Grault> graults) {
-        this.graults = graults;
+    public ArrayList<Grault> getGraults() {
+        return this.graults;
     }
 
     public Corge getCorge() {
@@ -33,9 +33,10 @@ public class Foo {
         this.corge = corge;
     }
 
+
     public Foo(Bar bar) {
-        this.setBar(bar);
-        this.setQux(new Qux());
+        this.bar = bar;
+        this.qux = new Qux();
     }
 
     public void addBaz(Baz baz){

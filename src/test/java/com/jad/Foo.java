@@ -3,15 +3,39 @@ package com.jad;
 import java.util.ArrayList;
 
 public class Foo {
-    private final Bar bar;
+    private Bar bar;
     private ArrayList<Baz> bazs;
-    private final Qux qux;
+    private Qux qux;
     private Corge corge;
     private ArrayList<Grault> graults;
 
-    public Foo(Bar bar) {
+    public void setBar(Bar bar) {
         this.bar = bar;
-        this.qux = new Qux();
+    }
+
+    public void setBazs(ArrayList<Baz> bazs) {
+        this.bazs = bazs;
+    }
+
+    public void setQux(Qux qux) {
+        this.qux = qux;
+    }
+
+    public void setGraults(ArrayList<Grault> graults) {
+        this.graults = graults;
+    }
+
+    public Corge getCorge() {
+        return this.corge;
+    }
+
+    public void setCorge(Corge corge) {
+        this.corge = corge;
+    }
+
+    public Foo(Bar bar) {
+        this.setBar(bar);
+        this.setQux(new Qux());
     }
 
     public void addBaz(Baz baz){

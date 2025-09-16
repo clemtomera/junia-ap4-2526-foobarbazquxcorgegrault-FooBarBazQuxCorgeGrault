@@ -30,7 +30,15 @@ public class Foo {
     }
 
     public void setCorge(Corge corge) {
+        if (this.corge != null) {
+            // Supprimer le vieux Foo dans le Corge
+            this.corge.setFoo(null);
+        }
         this.corge = corge;
+        if (corge != null) {
+            // Recréer le lien
+            corge.setFoo(this);
+        }
     }
 
     public Foo(Bar bar) {

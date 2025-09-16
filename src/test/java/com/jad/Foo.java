@@ -33,10 +33,11 @@ public class Foo {
         this.corge = corge;
     }
 
-
     public Foo(Bar bar) {
         this.bar = bar;
+        this.bazs = new ArrayList<>();
         this.qux = new Qux();
+        this.graults = new ArrayList<>();
     }
 
     public void addBaz(Baz baz){
